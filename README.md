@@ -16,10 +16,5 @@
 </p>
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=abdulselam-muhammed&show_icons=true&theme=radical" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdulselam-muhammed&layout=compact&theme=radical" alt="Top languages" />
-</p>
-
-<p align="center">
   <img src="https://streak-stats.demolab.com?user=abdulselam-muhammed&theme=radical" alt="GitHub streak" />
 </p>
