@@ -1,20 +1,8 @@
-<h1 align="center">Hi 👋, I'm Abdulselam</h1>
-<h3 align="center">Full-stack developer building marketplace platforms, from APIs to admin screens</h3>
-
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=abdulselam-muhammed&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+  <img src="./assets/terminal-card.svg" alt="abdulselam-muhammed@github - full-stack developer building marketplace platforms (NestJS, Laravel, Next.js, React, PostgreSQL), currently on Mazad" width="900" />
 </p>
 
-- 🔭 I'm currently working on **Mazad**, a marketplace platform: NestJS microservices and a Next.js/React admin
-- 🌱 I'm currently learning **deeper system design, observability and CI/CD hardening**
-- 💬 Ask me about **PHP, Laravel, JavaScript, TypeScript, Node.js, NestJS, Next.js, MySQL, PostgreSQL and RAG**
-- 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/abdulselam-muhammed)
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=php,laravel,js,ts,nodejs,nestjs,nextjs,react,mysql,postgres,docker,githubactions,git,flutter,dart" alt="Languages and tools" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=abdulselam-muhammed&theme=radical" alt="GitHub streak" />
-</p>
+<!--
+  The card is generated: python scripts/gen_card.py  (needs Pillow and the gh CLI).
+  The previous profile is kept in backup/README.classic-2026-11-16.md and on the branch classic-profile.
+-->
