@@ -245,11 +245,11 @@ def build_small(stats):
     parts.append(f'<rect x="{cx:.1f}" y="{y - 12}" width="8" height="15" fill="{KEY}">'
                  '<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></rect>')
     H = y + 20
-    (ROOT / "assets" / "stats-card.svg").write_text(
+    (ROOT / "assets" / "stats-terminal.svg").write_text(
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}" role="img" aria-label="GitHub stats and a terminal prompt">\n'
         f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{PANEL}" stroke="{BORDER}"/>\n'
         + "\n".join(parts) + "\n</svg>\n", encoding="utf-8")
-    print("wrote assets/stats-card.svg")
+    print("wrote assets/stats-terminal.svg")
 
 
 if __name__ == "__main__":
