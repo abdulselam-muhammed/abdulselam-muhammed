@@ -21,11 +21,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/stats-card.svg" alt="GitHub stats: repos, stars, followers, following, contributions, PRs, issues" width="720" />
-</p>
-
-<p align="center">
-  <img src="./assets/prompt.svg" alt="visitor@abdulselam-muhammed:~$" width="720" />
+  <img src="./assets/stats-card.svg" alt="GitHub stats: repos, stars, followers, following, contributions, PRs, issues - and visitor@abdulselam-muhammed:~$" width="720" />
 </p>
 
 <!--
