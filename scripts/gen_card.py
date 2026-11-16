@@ -206,3 +206,55 @@ def build(stats):
 
 if __name__ == "__main__":
     build(fetch_stats())
+
+
+# ---- small cards for the classic README: the GitHub Stats block and the blinking prompt ----
+def build_small(stats):
+    """assets/stats-card.svg (GitHub Stats + colour blocks) and assets/prompt.svg (blinking cursor)."""
+    W = 720
+    x = 24
+    parts = []
+
+    def t(xx, yy, segs, size=FS):
+        spans = "".join(f'<tspan fill="{c}"{" font-weight=\"bold\"" if b else ""}>{escape(s)}</tspan>' for s, c, b in segs)
+        parts.append(f'<text x="{xx}" y="{yy}" font-size="{size}" xml:space="preserve">{spans}</text>')
+
+    sep = (" | ", BORDER, False)
+    y = 34
+    t(x, y, [("GitHub Stats", HEAD, True), (" " + "─" * 70, BORDER, False)])
+    y += 24
+    t(x, y, [("Repos ", KEY, False), (str(stats["repos"]), VAL, False), sep,
+             ("Stars ", KEY, False), (str(stats["stars"]), VAL, False), sep,
+             ("Followers ", KEY, False), (str(stats["followers"]), VAL, False), sep,
+             ("Following ", KEY, False), (str(stats["following"]), VAL, False)])
+    y += 22
+    t(x, y, [("Contributions (1y) ", KEY, False), (f"{stats['contributions']:,}", VAL, False), sep,
+             ("PRs ", KEY, False), (f"{stats['prs']:,}", VAL, False), sep,
+             ("Issues ", KEY, False), (str(stats["issues"]), VAL, False)])
+    y += 16
+    dark = ["#484f58", "#ff7b72", "#3fb950", "#d29922", "#58a6ff", "#bc8cff", "#39c5cf", "#b1bac4"]
+    light = ["#6e7681", "#ffa198", "#56d364", "#e3b341", "#79c0ff", "#d2a8ff", "#56d4dd", "#ffffff"]
+    for i, (a, b) in enumerate(zip(dark, light)):
+        parts.append(f'<rect x="{x + i * 22}" y="{y}" width="22" height="13" fill="{a}"/>')
+        parts.append(f'<rect x="{x + i * 22}" y="{y + 13}" width="22" height="13" fill="{b}"/>')
+    H = y + 26 + 22
+    (ROOT / "assets" / "stats-card.svg").write_text(
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}" role="img" aria-label="GitHub stats">\n'
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{PANEL}" stroke="{BORDER}"/>\n'
+        + "\n".join(parts) + "\n</svg>\n", encoding="utf-8")
+
+    parts = []
+    PH = 52
+    t(x, 31, [("visitor", PROMPT, False), ("@", TXT, False), (LOGIN, KEY, True), (":", TXT, False), ("~", VAL, False), ("$ ", TXT, False)])
+    cx = x + CHW * len("visitor@" + LOGIN + ":~$ ")
+    parts.append(f'<rect x="{cx:.1f}" y="19" width="8" height="15" fill="{KEY}">'
+                 '<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></rect>')
+    (ROOT / "assets" / "prompt.svg").write_text(
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{PH}" viewBox="0 0 {W} {PH}" font-family="{FONT}" role="img" aria-label="visitor@{LOGIN}:~$">\n'
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{PH - 1}" rx="10" fill="{PANEL}" stroke="{BORDER}"/>\n'
+        + "\n".join(parts) + "\n</svg>\n", encoding="utf-8")
+    print("wrote assets/stats-card.svg and assets/prompt.svg")
+
+
+if __name__ == "__main__":
+    build_small(json.loads(STATS_FILE.read_text(encoding="utf-8")) if not shutil.which("gh") else fetch_stats())

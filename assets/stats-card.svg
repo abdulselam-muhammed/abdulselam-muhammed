@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="144" viewBox="0 0 720 144" font-family="Consolas,'SFMono-Regular','DejaVu Sans Mono','Courier New',monospace" role="img" aria-label="GitHub stats">
+<rect x="0.5" y="0.5" width="719" height="143" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="24" y="34" font-size="13" xml:space="preserve"><tspan fill="#e6edf3" font-weight="bold">GitHub Stats</tspan><tspan fill="#30363d"> ──────────────────────────────────────────────────────────────────────</tspan></text>
+<text x="24" y="58" font-size="13" xml:space="preserve"><tspan fill="#ffa657">Repos </tspan><tspan fill="#a5d6ff">23</tspan><tspan fill="#30363d"> | </tspan><tspan fill="#ffa657">Stars </tspan><tspan fill="#a5d6ff">0</tspan><tspan fill="#30363d"> | </tspan><tspan fill="#ffa657">Followers </tspan><tspan fill="#a5d6ff">5</tspan><tspan fill="#30363d"> | </tspan><tspan fill="#ffa657">Following </tspan><tspan fill="#a5d6ff">11</tspan></text>
+<text x="24" y="80" font-size="13" xml:space="preserve"><tspan fill="#ffa657">Contributions (1y) </tspan><tspan fill="#a5d6ff">1,600</tspan><tspan fill="#30363d"> | </tspan><tspan fill="#ffa657">PRs </tspan><tspan fill="#a5d6ff">942</tspan><tspan fill="#30363d"> | </tspan><tspan fill="#ffa657">Issues </tspan><tspan fill="#a5d6ff">37</tspan></text>
+<rect x="24" y="96" width="22" height="13" fill="#484f58"/>
+<rect x="24" y="109" width="22" height="13" fill="#6e7681"/>
+<rect x="46" y="96" width="22" height="13" fill="#ff7b72"/>
+<rect x="46" y="109" width="22" height="13" fill="#ffa198"/>
+<rect x="68" y="96" width="22" height="13" fill="#3fb950"/>
+<rect x="68" y="109" width="22" height="13" fill="#56d364"/>
+<rect x="90" y="96" width="22" height="13" fill="#d29922"/>
+<rect x="90" y="109" width="22" height="13" fill="#e3b341"/>
+<rect x="112" y="96" width="22" height="13" fill="#58a6ff"/>
+<rect x="112" y="109" width="22" height="13" fill="#79c0ff"/>
+<rect x="134" y="96" width="22" height="13" fill="#bc8cff"/>
+<rect x="134" y="109" width="22" height="13" fill="#d2a8ff"/>
+<rect x="156" y="96" width="22" height="13" fill="#39c5cf"/>
+<rect x="156" y="109" width="22" height="13" fill="#56d4dd"/>
+<rect x="178" y="96" width="22" height="13" fill="#b1bac4"/>
+<rect x="178" y="109" width="22" height="13" fill="#ffffff"/>
+</svg>
